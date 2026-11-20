@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book an appointment with Grizzly Ridge Electric in Lethbridge. Request a quote or schedule electrical service today.">
+    <title>Book an Appointment | Grizzly Ridge Electric Inc.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/bear_logo_transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div>
+                    <i class="fas fa-map-marker-alt"></i> Serving Lethbridge & Surrounding Areas
+                </div>
+                <a href="tel:xxxxxxxxxx" class="phone-link">
+                    <i class="fas fa-phone-alt"></i> Call Now: (xxx) xxx xxxx
+                </a>
+            </div>
+        </div>
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <img src="images/grizzly_logo_transparent.png" alt="Grizzly Ridge Electric Inc." style="filter: brightness(0) invert(1);">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="book.html" class="cta-header active">Book Appointment</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header" style="background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);">
+        <div class="container">
+            <h1>Book an Appointment</h1>
+            <p>Request a quote or schedule your electrical service</p>
+        </div>
+    </section>
+
+    <section class="book-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p style="color: #ccc;">Fill out the form below or call us directly. We'll respond promptly to discuss your electrical needs.</p>
+            </div>
+
+            <div class="book-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Phone</strong><br>
+                            <a href="tel:8255234749" style="color: var(--accent);">(825) 523-4749</a><br>
+                            <span style="font-size: 0.9rem; color: #aaa;">Available for service calls</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:info@grizzlyridgeelectrical.ca" style="color: var(--accent);">info@grizzlyridgeelectric.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Service Area</strong><br>
+                            Lethbridge, Alberta & Surrounding Areas
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Hours</strong><br>
+                            Monday – Friday: 7:00 AM – 5:00 PM<br>
+                            Emergency service available
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 40px;">
+                        <h3>Why Book With Us?</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Professional & licensed</li>
+                            <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Fair, transparent pricing</li>
+                            <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Clean & respectful service</li>
+                            <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Your satisfaction is our priority</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 25px; color: var(--primary);">Request an Appointment</h3>
+                    <form id="contactForm" action="https://formspree.io/f/mrpzrklj" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="Residential Electrical">Residential Electrical</option>
+                                <option value="Commercial Electrical">Commercial Electrical</option>
+                                <option value="Repairs & Troubleshooting">Repairs & Troubleshooting</option>
+                                <option value="Lighting">Lighting Design & Installation</option>
+                                <option value="Panel Upgrade">Panel Upgrade / Service</option>
+                                <option value="Other">Other / Not Sure</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" required placeholder="Please describe your electrical needs, preferred timing, and any other details..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Submit Request
+                        </button>
+                        <p style="font-size: 0.85rem; color: #888; margin-top: 15px; text-align: center;">
+                            We typically respond within one to two business days .
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="images/grizzly_logo_transparent.png" alt="Grizzly Ridge Electric" style="height: 55px; filter: brightness(0) invert(1);">
+                    </div>
+                    <p>Your trusted electricians in Lethbridge. Top-tier electrical services with unmatched workmanship, quality, and professionalism.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Residential</a></li>
+                        <li><a href="services.html">Commercial</a></li>
+                        <li><a href="services.html">Repairs</a></li>
+                        <li><a href="services.html">Lighting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Lethbridge, Alberta</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:xxxxxxxxxx">(xxx) xxx xxxx</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@grizzlyridgeelectrical.ca">info@grizzlyridgeelectric.com</a></p>
+                    <p style="margin-top: 15px;"><a href="book.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Book Appointment</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Grizzly Ridge Electric Inc. All Rights Reserved. | Licensed Electricians serving Lethbridge, AB</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
