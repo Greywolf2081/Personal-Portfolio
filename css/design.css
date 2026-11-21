@@ -1,4 +1,3 @@
-
 /* ========================================
    01. COLOURS & VARIABLES
 ======================================== */
@@ -8,22 +7,31 @@
     --scroll-bg: rgb(177, 144, 82);
 
     /* Main website colours */
-    --page-bg: #f8f9fa;
-    --card-bg: #ffffff;
-    --text-primary: #222;
-    --text-secondary: #444;
+--page-bg: #454b55;
+--card-bg: #555d68;
+--text-primary: #f5f6f8;
+--text-secondary: #e0e4ea;
 
     /* Header, footer, and contact colours */
-    --header-bg: color-mix(in srgb, var(--scroll-bg) 25%, black);
-    --footer-bg: color-mix(in srgb, var(--scroll-bg) 30%, white);
-    --contact-bg: color-mix(in srgb, var(--scroll-bg) 80%, black);
+    --header-bg: color-mix(
+        in srgb,
+        var(--scroll-bg) 25%,
+        #11151d
+    );
+
+    --footer-bg: color-mix(
+        in srgb,
+        var(--scroll-bg) 25%,
+        #11151d
+    );
+
+    --contact-bg: #171b23;
 
     /* Buttons and links */
-    --link-color: #186dec;
-    --button-bg: #391ded;
-    --button-hover: #1d4ed8;
+    --link-color: #93c5fd;
+    --button-bg: #4338ca;
+    --button-hover: #5145e5;
 }
-
 
 /* ========================================
    02. GLOBAL / BASE STYLES
@@ -61,7 +69,6 @@ a:hover {
     padding: 0 3rem;
 }
 
-
 /* ========================================
    03. HEADER & NAVIGATION
 ======================================== */
@@ -94,7 +101,7 @@ header {
 
 /* Navigation links */
 nav a {
-    color: #ddd;
+    color: #e2e8f0;
     margin-left: 1.4rem;
     font-size: 0.95rem;
 }
@@ -104,29 +111,25 @@ nav a:hover {
     text-decoration: none;
 }
 
-
 /* ========================================
    04. BUTTONS
 ======================================== */
 
 .btn {
     display: inline-block;
-
     background-color: var(--button-bg);
-    color: white;
-
+    color: #ffffff;
     padding: 0.7rem 1.5rem;
     border-radius: 6px;
     font-weight: 500;
-
     transition: background-color 0.2s;
 }
 
 .btn:hover {
     background-color: var(--button-hover);
+    color: #ffffff;
     text-decoration: none;
 }
-
 
 /* ========================================
    05. HOMEPAGE - HERO SECTION
@@ -193,7 +196,6 @@ nav a:hover {
     border-radius: 12px;
 }
 
-
 /* ========================================
    06. HOMEPAGE - TECHNICAL SKILLS
 ======================================== */
@@ -214,8 +216,8 @@ nav a:hover {
 /* Individual skill boxes */
 .skill {
     background-color: var(--card-bg);
-    border: 1px solid rgba(0, 0, 0, 0.12);
-
+    color: var(--text-primary);
+    border: 1px solid #414956;
     padding: 0.5rem 1.1rem;
     border-radius: 6px;
     font-size: 0.95rem;
@@ -224,7 +226,6 @@ nav a:hover {
 .skills-description {
     color: var(--text-secondary);
 }
-
 
 /* ========================================
    07. GENERAL CONTENT SECTIONS
@@ -255,19 +256,16 @@ nav a:hover {
     margin-bottom: 1.5rem;
 }
 
-
 /* ========================================
    08. PROJECTS - CARDS & CONTENT
 ======================================== */
 
 .project-card {
     background-color: var(--card-bg);
-
     border-radius: 10px;
     overflow: hidden;
-
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    border: 1px solid #414956;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
 /* Project screenshot - display entire image */
@@ -281,17 +279,13 @@ nav a:hover {
 }
 
 /* Project description */
-.project-content {
-    padding: 1.6rem;
+.project-content p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
 }
 
 .project-content h3 {
     margin-bottom: 0.6rem;
-}
-
-.project-content p {
-    color: #555;
-    margin-bottom: 1rem;
 }
 
 /* Project technology tags */
@@ -301,18 +295,14 @@ nav a:hover {
 
 .tag {
     display: inline-block;
-
-    background-color: #e0e7ff;
-    color: #3730a3;
-
+    background-color: #353e5b;
+    color: #c7d2fe;
     font-size: 0.8rem;
     padding: 0.25rem 0.75rem;
     border-radius: 999px;
-
     margin-right: 0.4rem;
     margin-bottom: 0.3rem;
 }
-
 
 /* ========================================
    09. PROJECTS - WEBSITE PREVIEW
@@ -333,7 +323,21 @@ nav a:hover {
     max-width: 1200px;
 }
 
+.project-details {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    border: 1px solid #414956;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
 
+.future-projects {
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border: 1px solid #414956;
+    border-radius: 12px;
+}
 
 /* ========================================
    10. HOMEPAGE - RESUME
@@ -404,7 +408,6 @@ nav a:hover {
     }
 }
 
-
 /* ========================================
    11. ABOUT ME - PAGE CONTENT
 ======================================== */
@@ -452,7 +455,6 @@ nav a:hover {
     border-radius: 12px;
 }
 
-
 /* ========================================
    12. CONTACT SECTION
 ======================================== */
@@ -488,22 +490,19 @@ nav a:hover {
 
 .contact-links a {
     display: inline-block;
-
     padding: 0.7rem 1.5rem;
-    background-color: white;
-    color: #222;
-
+    background-color: #343c49;
+    color: #f1f3f5;
+    border: 1px solid #4b5563;
     border-radius: 6px;
     font-weight: 500;
     text-decoration: none;
-
     transition: background-color 0.2s;
 }
 
 .contact-links a:hover {
-    background-color: #e5e7eb;
+    background-color: #465166;
 }
-
 
 /* ========================================
    13. FOOTER
@@ -512,14 +511,11 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 1.4rem 0;
-
     background-color: var(--footer-bg);
-    color: #333;
-
+    color: #e2e8f0;
     font-size: 0.9rem;
     transition: background-color 0.15s linear;
 }
-
 
 /* ========================================
    14. RESPONSIVE - TABLETS & MOBILE
