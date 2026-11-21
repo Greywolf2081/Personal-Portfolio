@@ -1,430 +1,595 @@
 
 /* ========================================
-   BASE & COLOUR SYSTEM
+   01. COLOURS & VARIABLES
 ======================================== */
 
 :root {
-  --scroll-bg: rgb(177, 144, 82);
-  --surface-light: color-mix(in srgb, var(--scroll-bg) 18%, white);
-  --surface-card: color-mix(in srgb, var(--scroll-bg) 8%, white);
-  --surface-dark: color-mix(in srgb, var(--scroll-bg) 80%, black);
-  --surface-footer: color-mix(in srgb, var(--scroll-bg) 30%, white);
+    /* Updated by script.js when scrolling */
+    --scroll-bg: rgb(177, 144, 82);
+
+    /* Main website colours */
+    --page-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-primary: #222;
+    --text-secondary: #444;
+
+    /* Header, footer, and contact colours */
+    --header-bg: color-mix(in srgb, var(--scroll-bg) 25%, black);
+    --footer-bg: color-mix(in srgb, var(--scroll-bg) 30%, white);
+    --contact-bg: color-mix(in srgb, var(--scroll-bg) 80%, black);
+
+    /* Buttons and links */
+    --link-color: #186dec;
+    --button-bg: #391ded;
+    --button-hover: #1d4ed8;
 }
 
+
+/* ========================================
+   02. GLOBAL / BASE STYLES
+======================================== */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.6;
-  color: #222;
-  background-color: var(--scroll-bg);
-  transition: background-color 0.15s linear;
-  min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--page-bg);
+    min-height: 100vh;
 }
 
 a {
-  color: #186dec;
-  text-decoration: none;
+    color: var(--link-color);
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
+/* Main content width */
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
 }
+
 
 /* ========================================
-   HEADER
+   03. HEADER & NAVIGATION
 ======================================== */
 
 header {
-  background-color: color-mix(in srgb, var(--scroll-bg) 25%, black);
-  color: white;
-  padding: 1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(8px);
-  transition: background-color 0.15s linear;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 1.5rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background-color: var(--header-bg);
+    color: white;
+
+    backdrop-filter: blur(8px);
+    transition: background-color 0.15s linear;
 }
 
+/* Website name */
 .logo {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: white;
-  text-decoration: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: white;
+    text-decoration: none;
 }
 
+/* Navigation links */
 nav a {
-  color: #ddd;
-  margin-left: 1.4rem;
-  font-size: 0.95rem;
+    color: #ddd;
+    margin-left: 1.4rem;
+    font-size: 0.95rem;
 }
 
 nav a:hover {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
+
 
 /* ========================================
-   HERO
-======================================== */
-
-.hero {
-  padding: 4.5rem 0 3.5rem;
-  text-align: center;
-  background-color: var(--surface-light);
-  transition: background-color 0.15s linear;
-}
-
-.hero h1 {
-  font-size: 2.4rem;
-  margin-bottom: 0.4rem;
-}
-
-.subtitle {
-  color: #555;
-  font-size: 1.15rem;
-  margin-bottom: 1.2rem;
-}
-
-.intro {
-  max-width: 620px;
-  margin: 0 auto 2rem;
-  color: #444;
-}
-
-/* ========================================
-   BUTTON
+   04. BUTTONS
 ======================================== */
 
 .btn {
-  display: inline-block;
-  background: #391ded;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: background 0.2s;
+    display: inline-block;
+
+    background-color: var(--button-bg);
+    color: white;
+
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+
+    transition: background-color 0.2s;
 }
 
 .btn:hover {
-  background: #1d4ed8;
-  text-decoration: none;
+    background-color: var(--button-hover);
+    text-decoration: none;
 }
 
+
 /* ========================================
-   SECTIONS
+   05. HOMEPAGE - HERO SECTION
+======================================== */
+
+.hero {
+    padding: 5rem 0;
+    background-color: var(--page-bg);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.4rem;
+}
+
+/* Student subtitle */
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Introduction paragraph */
+.intro {
+    max-width: 620px;
+    margin: 0 auto 2rem;
+    color: var(--text-secondary);
+}
+
+/* Putting the text and my portrait side by side */
+.hero-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    text-align: left;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 650px;
+    min-width: 0;
+}
+
+.hero-text .intro {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Homepage portrait */
+.hero-image {
+    flex: 0 0 360px;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 380px;
+
+    object-fit: cover;
+    object-position: center 25%;
+
+    border-radius: 12px;
+}
+
+
+/* ========================================
+   06. HOMEPAGE - TECHNICAL SKILLS
+======================================== */
+
+.page-content.skills-section {
+    min-height: unset;
+    height: auto;
+    padding: 2rem 0 1rem;
+}
+
+/* Skills container */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+/* Individual skill boxes */
+.skill {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+
+    padding: 0.5rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.skills-description {
+    color: var(--text-secondary);
+}
+
+
+/* ========================================
+   07. GENERAL CONTENT SECTIONS
 ======================================== */
 
 .section {
-  padding: 3.5rem 0;
-  background-color: var(--surface-light);
-  transition: background-color 0.15s linear;
+    padding: 1.5rem 0 3.5rem;
+    background-color: var(--page-bg);
 }
 
 .section h2 {
-  font-size: 1.7rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
-  padding-bottom: 0.5rem;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    padding-bottom: 0.5rem;
 }
 
-/* ========================================
-   PROJECT CARD
-======================================== */
-
-.project-card {
-  background-color: var(--surface-card);
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
-  transition: background-color 0.15s linear;
-}
-
-.project-card img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  background: #e5e7eb;
-  display: block;
-}
-
-.project-content {
-  padding: 1.6rem;
-}
-
-.project-content h3 {
-  margin-bottom: 0.6rem;
-}
-
-.project-content p {
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-.tags {
-  margin-bottom: 1.1rem;
-}
-
-.tag {
-  display: inline-block;
-  background: #e0e7ff;
-  color: #3730a3;
-  font-size: 0.8rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  margin-right: 0.4rem;
-  margin-bottom: 0.3rem;
-}
-
-/* ========================================
-   SKILLS
-======================================== */
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-}
-
-.skill {
-  background-color: var(--surface-card);
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 0.5rem 1.1rem;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  transition: background-color 0.15s linear;
-}
-
-/* ========================================
-   CONTACT
-======================================== */
-
-.contact {
-  background-color: var(--surface-dark);
-  color: white;
-  text-align: center;
-  padding: 3.5rem 0;
-  transition: background-color 0.15s linear;
-}
-
-.contact h2 {
-  border: none;
-  margin-bottom: 0.8rem;
-}
-
-.contact a {
-  color: #93c5fd;
-}
-
-/* ========================================
-   FOOTER
-======================================== */
-
-footer {
-  text-align: center;
-  padding: 1.4rem 0;
-  background-color: var(--surface-footer);
-  color: #444;
-  font-size: 0.9rem;
-  transition: background-color 0.15s linear;
-}
-
-/* ========================================
-   PAGE CONTENT
-======================================== */
-
+/* General content pages */
 .page-content {
-  padding: 3.5rem 0;
-  min-height: 60vh;
-  background-color: var(--surface-light);
-  transition: background-color 0.15s linear;
+    padding: 3.5rem 0;
+    min-height: 60vh;
+    background-color: var(--page-bg);
 }
 
 .page-content h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
+
 /* ========================================
-   PROJECT PREVIEW
+   08. PROJECTS - CARDS & CONTENT
+======================================== */
+
+.project-card {
+    background-color: var(--card-bg);
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+/* Project screenshot - display entire image */
+.project-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    background-color: #e5e7eb;
+}
+
+/* Project description */
+.project-content {
+    padding: 1.6rem;
+}
+
+.project-content h3 {
+    margin-bottom: 0.6rem;
+}
+
+.project-content p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Project technology tags */
+.tags {
+    margin-bottom: 1.1rem;
+}
+
+.tag {
+    display: inline-block;
+
+    background-color: #e0e7ff;
+    color: #3730a3;
+
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+
+    margin-right: 0.4rem;
+    margin-bottom: 0.3rem;
+}
+
+
+/* ========================================
+   09. PROJECTS - WEBSITE PREVIEW
 ======================================== */
 
 .preview-frame {
-  width: 100%;
-  height: 750px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  display: block;
-  background-color: var(--surface-card);
-  transition: background-color 0.15s linear;
+    display: block;
+    width: 100%;
+    height: 750px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: var(--card-bg);
 }
 
+/* Wider container for project previews */
 .project-wide {
-  max-width: 1200px;
+    max-width: 1200px;
 }
+
+
 
 /* ========================================
-   RESPONSIVE
+   10. HOMEPAGE - RESUME
 ======================================== */
 
-@media (max-width: 640px) {
-  header {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  nav a {
-    margin-left: 0.9rem;
-  }
-
-  .hero h1 {
-    font-size: 1.9rem;
-  }
-
-  .project-card img {
-    height: 200px;
-  }
-
-  .preview-frame {
-    height: 500px;
-  }
-}
-
-/* FIX: SKILLS SECTION SPACING */
-
-.page-content.skills-section {
-  min-height: unset;
-  height: auto;
-  padding: 2rem 0 1rem;
-}
-
-/* Bring featured project closer to skills */
-
-.section {
-  padding-top: 1.5rem;
-}
-
-/* ========================================
-   GLOBAL PORTFOLIO COLOUR THEME
-======================================== */
-
-/* Main page background stays consistent */
-body {
-  background-color: #f8f9fa;
-  color: #222;
-}
-
-/* All main content sections */
-.hero,
-.section,
-.page-content,
-.about-hero,
-.about-content {
-  background-color: #f8f9fa;
-  color: #222;
-}
-
-/* Cards and individual skill boxes */
-.project-card,
-.skill,
-.preview-frame {
-  background-color: #ffffff;
-}
-
-/* Header follows scroll colour */
-header {
-  background-color: color-mix(in srgb, var(--scroll-bg) 25%, black);
-  transition: background-color 0.15s linear;
-}
-
-/* Footer follows scroll colour */
-footer {
-  background-color: color-mix(in srgb, var(--scroll-bg) 30%, white);
-  color: #333;
-  transition: background-color 0.15s linear;
-}
-
-/* Keep headings and content readable */
-.about-block p,
-.skills-description,
-.subtitle,
-.intro {
-  color: #444;
-}
-
-/* Skills section spacing */
-.page-content.skills-section {
-  min-height: unset;
-  height: auto;
-  padding: 2rem 0 1rem;
-}
-
-/* Featured project spacing */
-.section {
-  padding-top: 1.5rem;
-}
-
-/* Resume Section */
 .resume-section {
-  padding: 3rm 0;
-  background-color: #f8f9fa;
+    padding: 3rem 0;
+    background-color: var(--page-bg);
 }
 
 .resume-section h2 {
-  font-size: 1.7rem;
-  margin-bottom: 1.5rem;
-  text-align: left;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
 }
 
+/* Resume card - desktop layout */
+.resume-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+/* Resume preview container */
 .resume {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    min-width: 0;
 }
 
-.resume img {
-  display: block;
-  width:  100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 8px;
+/* Resume preview image */
+.resume-card .resume img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    background-color: transparent;
+    border-radius: 8px;
 }
 
-/* CONTACT LINKS */
+/* Resume description */
+.resume-card .project-content {
+    padding: 0;
+}
 
+.resume-card .project-content h3 {
+    margin-bottom: 1rem;
+}
+
+.resume-card .project-content p {
+    margin-bottom: 1.5rem;
+}
+
+
+/* Mobile resume layout */
+@media (max-width: 900px) {
+    .resume-card {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .resume-card .project-content {
+        text-align: center;
+    }
+}
+
+
+/* ========================================
+   11. ABOUT ME - PAGE CONTENT
+======================================== */
+
+.about-hero,
+.about-content {
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+}
+
+.about-content {
+    padding: 4rem 0;
+}
+
+.about-block p {
+    color: var(--text-secondary);
+}
+
+/* Introduction text and portrait */
+.about-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 0;
+}
+
+/* About Me portrait */
+.about-image {
+    flex: 0 0 300px;
+}
+
+.about-image img {
+    display: block;
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+    object-position: center 25%;
+
+    border-radius: 12px;
+}
+
+
+/* ========================================
+   12. CONTACT SECTION
+======================================== */
+
+.contact {
+    background-color: var(--contact-bg);
+    color: white;
+
+    text-align: center;
+    padding: 3.5rem 0;
+
+    transition: background-color 0.15s linear;
+}
+
+.contact h2 {
+    border: none;
+    margin-bottom: 0.8rem;
+}
+
+.contact a {
+    color: #93c5fd;
+}
+
+/* Contact buttons */
 .contact-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
     gap: 1rem;
     margin-top: 1.5rem;
 }
 
 .contact-links a {
     display: inline-block;
+
     padding: 0.7rem 1.5rem;
-    background-color: #ffffff;
+    background-color: white;
     color: #222;
+
     border-radius: 6px;
     font-weight: 500;
     text-decoration: none;
+
     transition: background-color 0.2s;
 }
 
 .contact-links a:hover {
     background-color: #e5e7eb;
+}
+
+
+/* ========================================
+   13. FOOTER
+======================================== */
+
+footer {
+    text-align: center;
+    padding: 1.4rem 0;
+
+    background-color: var(--footer-bg);
+    color: #333;
+
+    font-size: 0.9rem;
+    transition: background-color 0.15s linear;
+}
+
+
+/* ========================================
+   14. RESPONSIVE - TABLETS & MOBILE
+   Screens 768px wide or smaller
+======================================== */
+
+@media (max-width: 900px) {
+
+    /* Homepage portrait layout */
+    .hero-layout {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-image {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .hero-text .intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* About Me portrait layout */
+    .about-layout {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+    }
+
+    .about-image {
+        flex: none;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .about-image img {
+        height: auto;
+    }
+}
+
+/* ========================================
+   15. RESPONSIVE - SMALL PHONES
+======================================== */
+
+@media (max-width: 640px) {
+
+    /* Header */
+    header {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    nav a {
+        margin-left: 0.9rem;
+    }
+
+    /* Homepage */
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    /* Website preview */
+    .preview-frame {
+        height: 500px;
+    }
 }
