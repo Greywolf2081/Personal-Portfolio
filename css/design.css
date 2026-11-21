@@ -1,0 +1,430 @@
+
+/* ========================================
+   BASE & COLOUR SYSTEM
+======================================== */
+
+:root {
+  --scroll-bg: rgb(177, 144, 82);
+  --surface-light: color-mix(in srgb, var(--scroll-bg) 18%, white);
+  --surface-card: color-mix(in srgb, var(--scroll-bg) 8%, white);
+  --surface-dark: color-mix(in srgb, var(--scroll-bg) 80%, black);
+  --surface-footer: color-mix(in srgb, var(--scroll-bg) 30%, white);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: var(--scroll-bg);
+  transition: background-color 0.15s linear;
+  min-height: 100vh;
+}
+
+a {
+  color: #186dec;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+  background-color: color-mix(in srgb, var(--scroll-bg) 25%, black);
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  transition: background-color 0.15s linear;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav a {
+  color: #ddd;
+  margin-left: 1.4rem;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  padding: 4.5rem 0 3.5rem;
+  text-align: center;
+  background-color: var(--surface-light);
+  transition: background-color 0.15s linear;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+}
+
+.intro {
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  color: #444;
+}
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.btn {
+  display: inline-block;
+  background: #391ded;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+  text-decoration: none;
+}
+
+/* ========================================
+   SECTIONS
+======================================== */
+
+.section {
+  padding: 3.5rem 0;
+  background-color: var(--surface-light);
+  transition: background-color 0.15s linear;
+}
+
+.section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 0.5rem;
+}
+
+/* ========================================
+   PROJECT CARD
+======================================== */
+
+.project-card {
+  background-color: var(--surface-card);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  transition: background-color 0.15s linear;
+}
+
+.project-card img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  background: #e5e7eb;
+  display: block;
+}
+
+.project-content {
+  padding: 1.6rem;
+}
+
+.project-content h3 {
+  margin-bottom: 0.6rem;
+}
+
+.project-content p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  margin-bottom: 1.1rem;
+}
+
+.tag {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-right: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+
+/* ========================================
+   SKILLS
+======================================== */
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.skill {
+  background-color: var(--surface-card);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 0.5rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background-color 0.15s linear;
+}
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact {
+  background-color: var(--surface-dark);
+  color: white;
+  text-align: center;
+  padding: 3.5rem 0;
+  transition: background-color 0.15s linear;
+}
+
+.contact h2 {
+  border: none;
+  margin-bottom: 0.8rem;
+}
+
+.contact a {
+  color: #93c5fd;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+  text-align: center;
+  padding: 1.4rem 0;
+  background-color: var(--surface-footer);
+  color: #444;
+  font-size: 0.9rem;
+  transition: background-color 0.15s linear;
+}
+
+/* ========================================
+   PAGE CONTENT
+======================================== */
+
+.page-content {
+  padding: 3.5rem 0;
+  min-height: 60vh;
+  background-color: var(--surface-light);
+  transition: background-color 0.15s linear;
+}
+
+.page-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   PROJECT PREVIEW
+======================================== */
+
+.preview-frame {
+  width: 100%;
+  height: 750px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: block;
+  background-color: var(--surface-card);
+  transition: background-color 0.15s linear;
+}
+
+.project-wide {
+  max-width: 1200px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 640px) {
+  header {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  nav a {
+    margin-left: 0.9rem;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .project-card img {
+    height: 200px;
+  }
+
+  .preview-frame {
+    height: 500px;
+  }
+}
+
+/* FIX: SKILLS SECTION SPACING */
+
+.page-content.skills-section {
+  min-height: unset;
+  height: auto;
+  padding: 2rem 0 1rem;
+}
+
+/* Bring featured project closer to skills */
+
+.section {
+  padding-top: 1.5rem;
+}
+
+/* ========================================
+   GLOBAL PORTFOLIO COLOUR THEME
+======================================== */
+
+/* Main page background stays consistent */
+body {
+  background-color: #f8f9fa;
+  color: #222;
+}
+
+/* All main content sections */
+.hero,
+.section,
+.page-content,
+.about-hero,
+.about-content {
+  background-color: #f8f9fa;
+  color: #222;
+}
+
+/* Cards and individual skill boxes */
+.project-card,
+.skill,
+.preview-frame {
+  background-color: #ffffff;
+}
+
+/* Header follows scroll colour */
+header {
+  background-color: color-mix(in srgb, var(--scroll-bg) 25%, black);
+  transition: background-color 0.15s linear;
+}
+
+/* Footer follows scroll colour */
+footer {
+  background-color: color-mix(in srgb, var(--scroll-bg) 30%, white);
+  color: #333;
+  transition: background-color 0.15s linear;
+}
+
+/* Keep headings and content readable */
+.about-block p,
+.skills-description,
+.subtitle,
+.intro {
+  color: #444;
+}
+
+/* Skills section spacing */
+.page-content.skills-section {
+  min-height: unset;
+  height: auto;
+  padding: 2rem 0 1rem;
+}
+
+/* Featured project spacing */
+.section {
+  padding-top: 1.5rem;
+}
+
+/* Resume Section */
+.resume-section {
+  padding: 3rm 0;
+  background-color: #f8f9fa;
+}
+
+.resume-section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.resume {
+  display: flex;
+  justify-content: center;
+}
+
+.resume img {
+  display: block;
+  width:  100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* CONTACT LINKS */
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-links a {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: #ffffff;
+    color: #222;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.contact-links a:hover {
+    background-color: #e5e7eb;
+}

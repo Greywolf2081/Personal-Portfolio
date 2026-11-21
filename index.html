@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tyler Kurtz | Portfolio</title>
   <link rel="icon" href="howling_wolf_transparent.png">
-  <link rel="stylesheet" href="design.css">
+  <link rel="stylesheet" href="css/design.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111111'/%3E%3Ctext x='50' y='67' font-size='48' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-weight='bold'%3ETK%3C/text%3E%3C/svg%3E">
+
 </head>
 <body>
 
   <header>
     <a href="index.html" class="logo">Tyler Kurtz</a>
     <nav>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="project.html">Project</a>
-      <a href="skills.html">Skills</a>
+      <a href="project.html">Projects</a>
     </nav>
   </header>
 
@@ -31,25 +33,30 @@
     </div>
   </section>
 
-    <section class="page-content">
-    <div class="container">
-      <h1>Skills</h1>
-      <div class="skills-grid">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">Responsive Design</div>
-        <div class="skill">Web Design</div>
-        <div class="skill">Problem Solving</div>
-      </div>
+
+<section class="page-content skills-section">
+  <div class="container">
+    <h1>Technical Skills</h1>
+    <p class="skills-description">
+    </p>
+
+    <div class="skills-grid">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">Web Design</div>
+      <div class="skill">Problem Solving</div>
     </div>
-  </section>
+  </div>
+</section>
+
 
     <section class="section">
     <div class="container">
       <h2>Featured Project</h2>
 
       <div class="project-card">
-        <img src="grizzly_screenshot.png" alt="Screenshot of Electrical Website">
+        <img src="/images/grizzly_ridge_screenshot.png" alt="Screenshot of Electrical Website">
 
         <div class="project-content">
           <h3>Electrical Website</h3>
@@ -70,21 +77,65 @@
             and making a site that works well on different screen sizes.
           </p>
 
-          <a href="#" class="btn" target="_blank">View Live Site</a>
+          <a href="grizzly_ridge_electric_website/index.html" class="btn" target="_blank">View Live Site</a>
         </div>
       </div>
     </div>
   </section>
 
-    <section class="contact">
+<section class="resume-section">
     <div class="container">
-      <h2>Get in Touch</h2>
-      <p>Feel free to reach out if you'd like to connect.</p>
-      <p>
-        Email: <a href="mailto:tyler.kurtz@lethpolytech.ca">tyler.kurtz@lethpolytech.ca</a>
-      </p>
+        <h2>My Resume</h2>
+
+        <div class="project-card resume-card">
+            <div class="resume">
+                <img src="/images/Tyler_Kurtz_Resume_GIT_PNG.png"
+                     alt="Preview of my resume">
+            </div>
+
+            <div class="project-content">
+                <h3>PDF Resume Link</h3>
+
+                <p>
+                    Here you'll be able to see my resume in full format
+                </p>
+
+                <a href="/documents/Tyler_Kurtz_Resume_GIT_PDF.pdf"
+                   class="btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View Full Resume (PDF)
+                </a>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
+
+<section class="contact">
+    <div class="container">
+        <h2>Get in Touch</h2>
+
+        <p>Feel free to reach out if you'd like to connect.</p>
+
+        <div class="contact-links">
+            <a href="mailto:tyler.kurtz@lethpolytech.ca">
+                Email Me
+            </a>
+
+            <a href="https://www.linkedin.com/in/tyler-kurtz-927a2838b/"
+               target="_blank"
+               rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/Greywolf2081/Personal-Portfolio"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub
+            </a>
+        </div>
+    </div>
+</section>
 
   <footer>
     <div class="container">
@@ -92,6 +143,6 @@
     </div>
   </footer>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
